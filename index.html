@@ -120,6 +120,7 @@
         .required {
             color: #e74c3c;
             font-weight: bold;
+            margin-left: 4px;
         }
         
         .options label {
@@ -275,6 +276,21 @@
             border: 1px solid #f5c6cb;
         }
         
+        /* 이미 참여했을 때 보여줄 안내 메시지 스타일 */
+        #alreadySubmitted {
+            display: none;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        #alreadySubmitted .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        #alreadySubmitted h2 {
+            color: #003d82;
+            margin-bottom: 15px;
+        }
+        
         .footer {
             text-align: center;
             margin-top: 30px;
@@ -319,17 +335,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- 헤더 및 로고 -->
         <div class="header">
             <div class="logo-section">
                 <svg class="logo" viewBox="0 0 520 60" xmlns="http://www.w3.org/2000/svg">
                     <g transform="translate(-20, 0)">
-                        <!-- 빨간 정사각형 -->
                         <rect x="110" y="5" width="50" height="50" fill="#e31c23"/>
-                        <!-- 중앙 흰색 원 (텍스트 높이와 동일) -->
                         <circle cx="135" cy="30" r="18" fill="white"/>
-                        
-                        <!-- TESO ENGINEERING 텍스트 -->
                         <text x="170" y="42" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#333">TESO ENGINEERING</text>
                     </g>
                 </svg>
@@ -338,1136 +349,1130 @@
             <div class="date"><strong>2025. 11</strong></div>
         </div>
 
-        <!-- 소개 -->
-        <div class="intro">
-            <h2>안녕하십니까.</h2>
-            <p style="margin-bottom: 12px;">귀사의 무궁한 발전을 기원합니다.</p>
-            <p style="margin-bottom: 12px;">태조엔지니어링은 2002년 창립 이래 <strong>GTX 최초 제안</strong>, <strong>보령 해저터널 FIDIC 어워드 수상</strong> 등 대한민국 철도 및 터널 엔지니어링을 선도해 왔습니다.</p>
-            <p style="margin-bottom: 15px;">고객만족도 제고를 위해, 그동안 기술형입찰에서 함께해 주신 종합건설사 여러분의 소중한 의견을 듣고자 합니다.</p>
-            
-            <h2>설문 목적</h2>
-            <ul>
-                <li>기술형입찰(TK/기술제안) 협업 프로세스 및 서비스 품질 진단</li>
-                <li>분야별 기술 역량 및 전문성 평가</li>
-                <li>GTX 2기, 대심도 터널 등 대형 프로젝트 대비 전략 수립</li>
-                <li>디지털 전환(DX) 및 ESG 대응 역량 강화</li>
-            </ul>
-            
-            <h2 style="margin-top: 15px;">설문 안내</h2>
-            <ul>
-                <li><strong>소요시간:</strong> 약 5분</li>
-                <li><strong>비밀보장:</strong> 익명으로 진행되며, 통계 목적으로만 활용됩니다</li>
-            </ul>
+        <div id="alreadySubmitted">
+            <div class="icon">✅</div>
+            <h2>이미 설문에 참여하셨습니다.</h2>
+            <p>소중한 의견을 주셔서 감사합니다.<br>커피 쿠폰은 입력하신 이메일로 발송될 예정입니다.</p>
         </div>
 
-        <!-- 커피쿠폰 안내 -->
-        <div class="gift-notice">
-            ☕ 설문에 응답해 주신 모든 분께 스타벅스 카페라테 T 2잔 쿠폰을 제공해 드립니다
+        <div id="surveyContent">
+            <div class="intro">
+                <h2>안녕하십니까.</h2>
+                <p style="margin-bottom: 12px;">귀사의 무궁한 발전을 기원합니다.</p>
+                <p style="margin-bottom: 12px;">태조엔지니어링은 2002년 창립 이래 <strong>GTX 최초 제안</strong>, <strong>보령 해저터널 FIDIC 어워드 수상</strong> 등 대한민국 철도 및 터널 엔지니어링을 선도해 왔습니다.</p>
+                <p style="margin-bottom: 15px;">고객만족도 제고를 위해, 그동안 기술형입찰에서 함께해 주신 종합건설사 여러분의 소중한 의견을 듣고자 합니다.</p>
+                
+                <h2>설문 목적</h2>
+                <ul>
+                    <li>기술형입찰(TK/기술제안) 협업 프로세스 및 서비스 품질 진단</li>
+                    <li>분야별 기술 역량 및 전문성 평가</li>
+                    <li>GTX 2기, 대심도 터널 등 대형 프로젝트 대비 전략 수립</li>
+                    <li>디지털 전환(DX) 및 ESG 대응 역량 강화</li>
+                </ul>
+                
+                <h2 style="margin-top: 15px;">설문 안내</h2>
+                <ul>
+                    <li><strong>소요시간:</strong> 약 5분</li>
+                    <li><strong>비밀보장:</strong> 익명으로 진행되며, 통계 목적으로만 활용됩니다</li>
+                    <li><strong>필수답변:</strong> 정확한 분석을 위해 모든 문항에 답변 부탁드립니다.</li>
+                </ul>
+            </div>
+
+            <div class="gift-notice">
+                ☕ 설문에 응답해 주신 모든 분께 스타벅스 카페라테 T 2잔 쿠폰을 제공해 드립니다
+            </div>
+
+            <form id="surveyForm" novalidate>
+                
+                <div class="part-title">Part 1. 기본 정보 및 협업 이력</div>
+                
+                <div class="question" id="q_company">
+                    <div class="question-title">Q1. 귀사명을 입력해 주십시오. <span class="required">*</span></div>
+                    <input type="text" name="company" required placeholder="예: 현대건설, 대림산업, GS건설 등">
+                </div>
+
+                <div class="question" id="q_q2">
+                    <div class="question-title">Q2. TESO ENGINEERING과 기술형입찰(TK/기술제안) 협업 경험은? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="10회이상" required> ① 10회 이상</label>
+                        <label><input type="radio" name="q2" value="5-9회"> ② 5~9회</label>
+                        <label><input type="radio" name="q2" value="3-4회"> ③ 3~4회</label>
+                        <label><input type="radio" name="q2" value="1-2회"> ④ 1~2회</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q3">
+                    <div class="question-title">Q3. 협업한 사업 분야를 모두 선택해 주십시오. (중복선택 가능) <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="checkbox" name="q3" value="기술형입찰"> 기술형입찰(TK/기술제안)</label>
+                        <label><input type="checkbox" name="q3" value="철도설계"> 철도 설계 (GTX, 광역철도, 고속철도, 도시철도 등)</label>
+                        <label><input type="checkbox" name="q3" value="터널설계"> 터널 설계 (대심도, 해저터널 포함)</label>
+                        <label><input type="checkbox" name="q3" value="도로설계"> 도로/교량 설계</label>
+                        <label><input type="checkbox" name="q3" value="복합개발"> 복합개발/지하공간 설계</label>
+                        <label><input type="checkbox" name="q3" value="물사업"> 물 사업 (상하수도, 수자원)</label>
+                        <label><input type="checkbox" name="q3" value="에너지"> 에너지/환경 사업</label>
+                        <label><input type="checkbox" name="q3" value="기타"> 기타 <input type="text" name="q3_other" placeholder="직접 입력"></label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q4">
+                    <div class="question-title">Q4. 가장 최근 협업 프로젝트는 언제였습니까? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="6개월이내" required> ① 6개월 이내</label>
+                        <label><input type="radio" name="q4" value="6개월-1년"> ② 6개월~1년 이내</label>
+                        <label><input type="radio" name="q4" value="1-2년"> ③ 1~2년 이내</label>
+                        <label><input type="radio" name="q4" value="2-3년"> ④ 2~3년 이내</label>
+                        <label><input type="radio" name="q4" value="3년이상"> ⑤ 3년 이상</label>
+                    </div>
+                </div>
+
+                <div class="part-title">Part 2. 인지도 및 주요 프로젝트</div>
+
+                <div class="question" id="q_q5">
+                    <div class="question-title">Q5. TESO ENGINEERING의 다음 주요 프로젝트를 알고 계십니까? <span class="required">*</span></div>
+                    <span class="note">각 프로젝트에 대해 선택해 주세요</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:45%">프로젝트</th>
+                                <th>잘 모름</th>
+                                <th>들어봄</th>
+                                <th>개요파악</th>
+                                <th>상세파악</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. GTX-A,B,C 기본계획 (최초 제안사)</td>
+                                <td><input type="radio" name="q5a" value="0" required></td>
+                                <td><input type="radio" name="q5a" value="1"></td>
+                                <td><input type="radio" name="q5a" value="2"></td>
+                                <td><input type="radio" name="q5a" value="3"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 보령 해저터널 (FIDIC 어워드)</td>
+                                <td><input type="radio" name="q5b" value="0" required></td>
+                                <td><input type="radio" name="q5b" value="1"></td>
+                                <td><input type="radio" name="q5b" value="2"></td>
+                                <td><input type="radio" name="q5b" value="3"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 압해-화원 해저터널</td>
+                                <td><input type="radio" name="q5c" value="0" required></td>
+                                <td><input type="radio" name="q5c" value="1"></td>
+                                <td><input type="radio" name="q5c" value="2"></td>
+                                <td><input type="radio" name="q5c" value="3"></td>
+                            </tr>
+                            <tr>
+                                <td>D. GTX-B 기본 및 실시설계(민자사업)</td>
+                                <td><input type="radio" name="q5d" value="0" required></td>
+                                <td><input type="radio" name="q5d" value="1"></td>
+                                <td><input type="radio" name="q5d" value="2"></td>
+                                <td><input type="radio" name="q5d" value="3"></td>
+                            </tr>
+                            <tr>
+                                <td>E. 동부간선도로 지하화</td>
+                                <td><input type="radio" name="q5e" value="0" required></td>
+                                <td><input type="radio" name="q5e" value="1"></td>
+                                <td><input type="radio" name="q5e" value="2"></td>
+                                <td><input type="radio" name="q5e" value="3"></td>
+                            </tr>
+                            <tr>
+                                <td>F. 위례-신사선 경전철 기본 및 실시 설계(민자사업)</td>
+                                <td><input type="radio" name="q5f" value="0" required></td>
+                                <td><input type="radio" name="q5f" value="1"></td>
+                                <td><input type="radio" name="q5f" value="2"></td>
+                                <td><input type="radio" name="q5f" value="3"></td>
+                            </tr>
+                            <tr>
+                                <td>G. 영동대로 복합환승센터 기본설계</td>
+                                <td><input type="radio" name="q5g" value="0" required></td>
+                                <td><input type="radio" name="q5g" value="1"></td>
+                                <td><input type="radio" name="q5g" value="2"></td>
+                                <td><input type="radio" name="q5g" value="3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q6">
+                    <div class="question-title">Q6. 위 프로젝트 중 가장 인상적인 것은? (2개까지 선택 가능) <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="checkbox" name="q6" value="GTX기본계획"> ① GTX 사업 (최초 제안 및 기본계획)</label>
+                        <label><input type="checkbox" name="q6" value="보령해저터널"> ② 보령 해저터널 (FIDIC 어워드)</label>
+                        <label><input type="checkbox" name="q6" value="압해화원"> ③ 압해-화원 해저터널</label>
+                        <label><input type="checkbox" name="q6" value="GTX-B실시"> ④ GTX-B 기본 및 실시설계(민자사업)</label>
+                        <label><input type="checkbox" name="q6" value="동부간선"> ⑤ 동부간선도로 지하화</label>
+                        <label><input type="checkbox" name="q6" value="위례신사"> ⑥ 위례-신사선 경전철 기본 및 실시 설계(민자사업)</label>
+                        <label><input type="checkbox" name="q6" value="영동대로"> ⑦ 영동대로 복합환승센터 기본설계</label>
+                        <label><input type="checkbox" name="q6" value="기타"> ⑧ 기타 <input type="text" name="q6_other" placeholder="직접 입력"></label>
+                    </div>
+                </div>
+
+                <div class="part-title">Part 3. 사업분야별 기술력 상세 평가</div>
+
+                <div class="question" id="q_q7">
+                    <div class="question-title">Q7. TESO ENGINEERING의 사업분야별 기술력을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:40%">사업분야</th>
+                                <th>N/A</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 철도 (GTX/광역철도/고속철도, 도시철도)</td>
+                                <td><input type="radio" name="q7a" value="N/A" required></td>
+                                <td><input type="radio" name="q7a" value="1"></td>
+                                <td><input type="radio" name="q7a" value="2"></td>
+                                <td><input type="radio" name="q7a" value="3"></td>
+                                <td><input type="radio" name="q7a" value="4"></td>
+                                <td><input type="radio" name="q7a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 터널 (대심도/해저/TBM/NATM)</td>
+                                <td><input type="radio" name="q7b" value="N/A" required></td>
+                                <td><input type="radio" name="q7b" value="1"></td>
+                                <td><input type="radio" name="q7b" value="2"></td>
+                                <td><input type="radio" name="q7b" value="3"></td>
+                                <td><input type="radio" name="q7b" value="4"></td>
+                                <td><input type="radio" name="q7b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 도로 (도로/교량/지하차도)</td>
+                                <td><input type="radio" name="q7c" value="N/A" required></td>
+                                <td><input type="radio" name="q7c" value="1"></td>
+                                <td><input type="radio" name="q7c" value="2"></td>
+                                <td><input type="radio" name="q7c" value="3"></td>
+                                <td><input type="radio" name="q7c" value="4"></td>
+                                <td><input type="radio" name="q7c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 에너지 (신재생/환경)</td>
+                                <td><input type="radio" name="q7d" value="N/A" required></td>
+                                <td><input type="radio" name="q7d" value="1"></td>
+                                <td><input type="radio" name="q7d" value="2"></td>
+                                <td><input type="radio" name="q7d" value="3"></td>
+                                <td><input type="radio" name="q7d" value="4"></td>
+                                <td><input type="radio" name="q7d" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>E. 물 사업 (상하수도, 수자원)</td>
+                                <td><input type="radio" name="q7e" value="N/A" required></td>
+                                <td><input type="radio" name="q7e" value="1"></td>
+                                <td><input type="radio" name="q7e" value="2"></td>
+                                <td><input type="radio" name="q7e" value="3"></td>
+                                <td><input type="radio" name="q7e" value="4"></td>
+                                <td><input type="radio" name="q7e" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>F. 복합개발/지하공간 설계</td>
+                                <td><input type="radio" name="q7f" value="N/A" required></td>
+                                <td><input type="radio" name="q7f" value="1"></td>
+                                <td><input type="radio" name="q7f" value="2"></td>
+                                <td><input type="radio" name="q7f" value="3"></td>
+                                <td><input type="radio" name="q7f" value="4"></td>
+                                <td><input type="radio" name="q7f" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q8">
+                    <div class="question-title">Q8. 터널 사업 관련 세부 기술력을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:40%">평가 항목</th>
+                                <th>N/A</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 대심도 터널 설계</td>
+                                <td><input type="radio" name="q8a" value="N/A" required></td>
+                                <td><input type="radio" name="q8a" value="1"></td>
+                                <td><input type="radio" name="q8a" value="2"></td>
+                                <td><input type="radio" name="q8a" value="3"></td>
+                                <td><input type="radio" name="q8a" value="4"></td>
+                                <td><input type="radio" name="q8a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 해저터널 설계</td>
+                                <td><input type="radio" name="q8b" value="N/A" required></td>
+                                <td><input type="radio" name="q8b" value="1"></td>
+                                <td><input type="radio" name="q8b" value="2"></td>
+                                <td><input type="radio" name="q8b" value="3"></td>
+                                <td><input type="radio" name="q8b" value="4"></td>
+                                <td><input type="radio" name="q8b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. TBM 공법 설계</td>
+                                <td><input type="radio" name="q8c" value="N/A" required></td>
+                                <td><input type="radio" name="q8c" value="1"></td>
+                                <td><input type="radio" name="q8c" value="2"></td>
+                                <td><input type="radio" name="q8c" value="3"></td>
+                                <td><input type="radio" name="q8c" value="4"></td>
+                                <td><input type="radio" name="q8c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. NATM 공법 설계</td>
+                                <td><input type="radio" name="q8d" value="N/A" required></td>
+                                <td><input type="radio" name="q8d" value="1"></td>
+                                <td><input type="radio" name="q8d" value="2"></td>
+                                <td><input type="radio" name="q8d" value="3"></td>
+                                <td><input type="radio" name="q8d" value="4"></td>
+                                <td><input type="radio" name="q8d" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>E. 지반조사 및 분석</td>
+                                <td><input type="radio" name="q8e" value="N/A" required></td>
+                                <td><input type="radio" name="q8e" value="1"></td>
+                                <td><input type="radio" name="q8e" value="2"></td>
+                                <td><input type="radio" name="q8e" value="3"></td>
+                                <td><input type="radio" name="q8e" value="4"></td>
+                                <td><input type="radio" name="q8e" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q9">
+                    <div class="question-title">Q9. 철도 사업 관련 세부 기술력을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:40%">평가 항목</th>
+                                <th>N/A</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. GTX/광역철도, 도시철도 계획 및 설계</td>
+                                <td><input type="radio" name="q9a" value="N/A" required></td>
+                                <td><input type="radio" name="q9a" value="1"></td>
+                                <td><input type="radio" name="q9a" value="2"></td>
+                                <td><input type="radio" name="q9a" value="3"></td>
+                                <td><input type="radio" name="q9a" value="4"></td>
+                                <td><input type="radio" name="q9a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 고속철도 설계</td>
+                                <td><input type="radio" name="q9b" value="N/A" required></td>
+                                <td><input type="radio" name="q9b" value="1"></td>
+                                <td><input type="radio" name="q9b" value="2"></td>
+                                <td><input type="radio" name="q9b" value="3"></td>
+                                <td><input type="radio" name="q9b" value="4"></td>
+                                <td><input type="radio" name="q9b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 철도 시스템 통합 역량</td>
+                                <td><input type="radio" name="q9c" value="N/A" required></td>
+                                <td><input type="radio" name="q9c" value="1"></td>
+                                <td><input type="radio" name="q9c" value="2"></td>
+                                <td><input type="radio" name="q9c" value="3"></td>
+                                <td><input type="radio" name="q9c" value="4"></td>
+                                <td><input type="radio" name="q9c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 역사 및 부대시설 설계</td>
+                                <td><input type="radio" name="q9d" value="N/A" required></td>
+                                <td><input type="radio" name="q9d" value="1"></td>
+                                <td><input type="radio" name="q9d" value="2"></td>
+                                <td><input type="radio" name="q9d" value="3"></td>
+                                <td><input type="radio" name="q9d" value="4"></td>
+                                <td><input type="radio" name="q9d" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q10">
+                    <div class="question-title">Q10. 도로 사업 관련 세부 기술력을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:40%">평가 항목</th>
+                                <th>N/A</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 도로 설계 (간선도로, 지방도 등)</td>
+                                <td><input type="radio" name="q10a" value="N/A" required></td>
+                                <td><input type="radio" name="q10a" value="1"></td>
+                                <td><input type="radio" name="q10a" value="2"></td>
+                                <td><input type="radio" name="q10a" value="3"></td>
+                                <td><input type="radio" name="q10a" value="4"></td>
+                                <td><input type="radio" name="q10a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 지하차도 설계</td>
+                                <td><input type="radio" name="q10b" value="N/A" required></td>
+                                <td><input type="radio" name="q10b" value="1"></td>
+                                <td><input type="radio" name="q10b" value="2"></td>
+                                <td><input type="radio" name="q10b" value="3"></td>
+                                <td><input type="radio" name="q10b" value="4"></td>
+                                <td><input type="radio" name="q10b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 교통계획 및 분석</td>
+                                <td><input type="radio" name="q10c" value="N/A" required></td>
+                                <td><input type="radio" name="q10c" value="1"></td>
+                                <td><input type="radio" name="q10c" value="2"></td>
+                                <td><input type="radio" name="q10c" value="3"></td>
+                                <td><input type="radio" name="q10c" value="4"></td>
+                                <td><input type="radio" name="q10c" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q11">
+                    <div class="question-title">Q11. 구조 분야 세부 기술력을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:40%">평가 항목</th>
+                                <th>N/A</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 교량 설계</td>
+                                <td><input type="radio" name="q11a" value="N/A" required></td>
+                                <td><input type="radio" name="q11a" value="1"></td>
+                                <td><input type="radio" name="q11a" value="2"></td>
+                                <td><input type="radio" name="q11a" value="3"></td>
+                                <td><input type="radio" name="q11a" value="4"></td>
+                                <td><input type="radio" name="q11a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 구조해석 및 설계</td>
+                                <td><input type="radio" name="q11b" value="N/A" required></td>
+                                <td><input type="radio" name="q11b" value="1"></td>
+                                <td><input type="radio" name="q11b" value="2"></td>
+                                <td><input type="radio" name="q11b" value="3"></td>
+                                <td><input type="radio" name="q11b" value="4"></td>
+                                <td><input type="radio" name="q11b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 내진설계</td>
+                                <td><input type="radio" name="q11c" value="N/A" required></td>
+                                <td><input type="radio" name="q11c" value="1"></td>
+                                <td><input type="radio" name="q11c" value="2"></td>
+                                <td><input type="radio" name="q11c" value="3"></td>
+                                <td><input type="radio" name="q11c" value="4"></td>
+                                <td><input type="radio" name="q11c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 지하구조물 설계</td>
+                                <td><input type="radio" name="q11d" value="N/A" required></td>
+                                <td><input type="radio" name="q11d" value="1"></td>
+                                <td><input type="radio" name="q11d" value="2"></td>
+                                <td><input type="radio" name="q11d" value="3"></td>
+                                <td><input type="radio" name="q11d" value="4"></td>
+                                <td><input type="radio" name="q11d" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q12">
+                    <div class="question-title">Q12. 물 사업 세부 기술력을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:40%">평가 항목</th>
+                                <th>N/A</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 상수도 설계</td>
+                                <td><input type="radio" name="q12a" value="N/A" required></td>
+                                <td><input type="radio" name="q12a" value="1"></td>
+                                <td><input type="radio" name="q12a" value="2"></td>
+                                <td><input type="radio" name="q12a" value="3"></td>
+                                <td><input type="radio" name="q12a" value="4"></td>
+                                <td><input type="radio" name="q12a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 하수도 설계</td>
+                                <td><input type="radio" name="q12b" value="N/A" required></td>
+                                <td><input type="radio" name="q12b" value="1"></td>
+                                <td><input type="radio" name="q12b" value="2"></td>
+                                <td><input type="radio" name="q12b" value="3"></td>
+                                <td><input type="radio" name="q12b" value="4"></td>
+                                <td><input type="radio" name="q12b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 수처리 시설 설계</td>
+                                <td><input type="radio" name="q12c" value="N/A" required></td>
+                                <td><input type="radio" name="q12c" value="1"></td>
+                                <td><input type="radio" name="q12c" value="2"></td>
+                                <td><input type="radio" name="q12c" value="3"></td>
+                                <td><input type="radio" name="q12c" value="4"></td>
+                                <td><input type="radio" name="q12c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 수자원 설계</td>
+                                <td><input type="radio" name="q12d" value="N/A" required></td>
+                                <td><input type="radio" name="q12d" value="1"></td>
+                                <td><input type="radio" name="q12d" value="2"></td>
+                                <td><input type="radio" name="q12d" value="3"></td>
+                                <td><input type="radio" name="q12d" value="4"></td>
+                                <td><input type="radio" name="q12d" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q13">
+                    <div class="question-title">Q13. 에너지 사업 세부 기술력을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:40%">평가 항목</th>
+                                <th>N/A</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 신재생에너지 설계</td>
+                                <td><input type="radio" name="q13a" value="N/A" required></td>
+                                <td><input type="radio" name="q13a" value="1"></td>
+                                <td><input type="radio" name="q13a" value="2"></td>
+                                <td><input type="radio" name="q13a" value="3"></td>
+                                <td><input type="radio" name="q13a" value="4"></td>
+                                <td><input type="radio" name="q13a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 환경영향평가</td>
+                                <td><input type="radio" name="q13b" value="N/A" required></td>
+                                <td><input type="radio" name="q13b" value="1"></td>
+                                <td><input type="radio" name="q13b" value="2"></td>
+                                <td><input type="radio" name="q13b" value="3"></td>
+                                <td><input type="radio" name="q13b" value="4"></td>
+                                <td><input type="radio" name="q13b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 에너지 효율화 설계(전력구)</td>
+                                <td><input type="radio" name="q13c" value="N/A" required></td>
+                                <td><input type="radio" name="q13c" value="1"></td>
+                                <td><input type="radio" name="q13c" value="2"></td>
+                                <td><input type="radio" name="q13c" value="3"></td>
+                                <td><input type="radio" name="q13c" value="4"></td>
+                                <td><input type="radio" name="q13c" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="part-title">Part 4. 기술형입찰(TK) 역량 평가</div>
+
+                <div class="question" id="q_q14">
+                    <div class="question-title">Q14. 기술형입찰 사업에서 TESO ENGINEERING의 역량을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:50%">평가 항목</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 기술제안서 창의성 및 실현가능성</td>
+                                <td><input type="radio" name="q14a" value="1" required></td>
+                                <td><input type="radio" name="q14a" value="2"></td>
+                                <td><input type="radio" name="q14a" value="3"></td>
+                                <td><input type="radio" name="q14a" value="4"></td>
+                                <td><input type="radio" name="q14a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 원가분석 경쟁력</td>
+                                <td><input type="radio" name="q14b" value="1" required></td>
+                                <td><input type="radio" name="q14b" value="2"></td>
+                                <td><input type="radio" name="q14b" value="3"></td>
+                                <td><input type="radio" name="q14b" value="4"></td>
+                                <td><input type="radio" name="q14b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 제안서 완성도 (도면, 보고서 품질)</td>
+                                <td><input type="radio" name="q14c" value="1" required></td>
+                                <td><input type="radio" name="q14c" value="2"></td>
+                                <td><input type="radio" name="q14c" value="3"></td>
+                                <td><input type="radio" name="q14c" value="4"></td>
+                                <td><input type="radio" name="q14c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 제안 일정 준수</td>
+                                <td><input type="radio" name="q14d" value="1" required></td>
+                                <td><input type="radio" name="q14d" value="2"></td>
+                                <td><input type="radio" name="q14d" value="3"></td>
+                                <td><input type="radio" name="q14d" value="4"></td>
+                                <td><input type="radio" name="q14d" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>E. VE (가치공학) 제안 능력</td>
+                                <td><input type="radio" name="q14e" value="1" required></td>
+                                <td><input type="radio" name="q14e" value="2"></td>
+                                <td><input type="radio" name="q14e" value="3"></td>
+                                <td><input type="radio" name="q14e" value="4"></td>
+                                <td><input type="radio" name="q14e" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q15">
+                    <div class="question-title">Q15. 기술형입찰 사업에서 TESO ENGINEERING과 협업 시 가장 큰 강점은? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="기술력창의성" required> ① 기술력과 창의성</label>
+                        <label><input type="radio" name="q15" value="작성속도"> ② 제안서 작성 속도</label>
+                        <label><input type="radio" name="q15" value="원가경쟁력"> ③ 원가분석 경쟁력</label>
+                        <label><input type="radio" name="q15" value="과거실적"> ④ 과거 수행 실적</label>
+                        <label><input type="radio" name="q15" value="협업태도"> ⑤ 협업 태도 및 유연성</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q16">
+                    <div class="question-title">Q16. 기술형입찰 사업에서 가장 개선이 필요한 부분은? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="창의성" required> ① 기술제안 창의성</label>
+                        <label><input type="radio" name="q16" value="원가절감"> ② 원가 절감 노력</label>
+                        <label><input type="radio" name="q16" value="완성도"> ③ 제안서 완성도</label>
+                        <label><input type="radio" name="q16" value="일정준수"> ④ 일정 준수</label>
+                        <label><input type="radio" name="q16" value="없음"> ⑤ 특별히 없음</label>
+                    </div>
+                </div>
+
+                <div class="part-title">Part 5. 전반적 업무 수행 평가</div>
+
+                <div class="question" id="q_q17">
+                    <div class="question-title">Q17. TESO ENGINEERING의 프로젝트 수행 전반을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:50%">평가 항목</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 프로젝트 수행 성실도</td>
+                                <td><input type="radio" name="q17a" value="1" required></td>
+                                <td><input type="radio" name="q17a" value="2"></td>
+                                <td><input type="radio" name="q17a" value="3"></td>
+                                <td><input type="radio" name="q17a" value="4"></td>
+                                <td><input type="radio" name="q17a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 납기 및 일정 준수</td>
+                                <td><input type="radio" name="q17b" value="1" required></td>
+                                <td><input type="radio" name="q17b" value="2"></td>
+                                <td><input type="radio" name="q17b" value="3"></td>
+                                <td><input type="radio" name="q17b" value="4"></td>
+                                <td><input type="radio" name="q17b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 설계 품질 (도면 정확도, 완성도)</td>
+                                <td><input type="radio" name="q17c" value="1" required></td>
+                                <td><input type="radio" name="q17c" value="2"></td>
+                                <td><input type="radio" name="q17c" value="3"></td>
+                                <td><input type="radio" name="q17c" value="4"></td>
+                                <td><input type="radio" name="q17c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 의사소통 및 피드백 신속성</td>
+                                <td><input type="radio" name="q17d" value="1" required></td>
+                                <td><input type="radio" name="q17d" value="2"></td>
+                                <td><input type="radio" name="q17d" value="3"></td>
+                                <td><input type="radio" name="q17d" value="4"></td>
+                                <td><input type="radio" name="q17d" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>E. 변경사항 대응 유연성</td>
+                                <td><input type="radio" name="q17e" value="1" required></td>
+                                <td><input type="radio" name="q17e" value="2"></td>
+                                <td><input type="radio" name="q17e" value="3"></td>
+                                <td><input type="radio" name="q17e" value="4"></td>
+                                <td><input type="radio" name="q17e" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>F. 사후 관리 및 지원</td>
+                                <td><input type="radio" name="q17f" value="1" required></td>
+                                <td><input type="radio" name="q17f" value="2"></td>
+                                <td><input type="radio" name="q17f" value="3"></td>
+                                <td><input type="radio" name="q17f" value="4"></td>
+                                <td><input type="radio" name="q17f" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q18">
+                    <div class="question-title">Q18. TESO ENGINEERING과의 협업에서 가장 만족스러웠던 점은? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="기술력" required> ① 전문 기술력</label>
+                        <label><input type="radio" name="q18" value="성실성"> ② 성실한 업무 수행</label>
+                        <label><input type="radio" name="q18" value="소통"> ③ 원활한 의사소통</label>
+                        <label><input type="radio" name="q18" value="일정"> ④ 일정 준수</label>
+                        <label><input type="radio" name="q18" value="문제해결"> ⑤ 적극적인 문제 해결</label>
+                        <label><input type="radio" name="q18" value="사후관리"> ⑥ 사후 관리 및 지원</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q19">
+                    <div class="question-title">Q19. TESO ENGINEERING과의 협업에서 가장 불만족스러웠던 점은? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="기술력부족" required> ① 기술력 부족</label>
+                        <label><input type="radio" name="q19" value="일정지연"> ② 일정 지연</label>
+                        <label><input type="radio" name="q19" value="의사소통"> ③ 의사소통 미흡</label>
+                        <label><input type="radio" name="q19" value="완성도"> ④ 결과물 완성도 부족</label>
+                        <label><input type="radio" name="q19" value="대응능력"> ⑤ 문제 대응 능력 부족</label>
+                        <label><input type="radio" name="q19" value="사후관리"> ⑥ 사후 관리 및 지원</label>
+                        <label><input type="radio" name="q19" value="없음"> ⑦ 특별히 없음</label>
+                    </div>
+                </div>
+
+                <div class="part-title">Part 6. 향후 협업 및 시장 선정 기준</div>
+
+                <div class="question" id="q_q20">
+                    <div class="question-title">Q20. 최근 3년간 기술형입찰/설계 사업에서 엔지니어링사 선정 시 가장 중요한 기준을 순서대로 선택해 주십시오. <span class="required">*</span></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:20%">순위</th>
+                                <th>선택 (해당 번호 선택)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1순위</td>
+                                <td>
+                                    <select name="q20_1" required>
+                                        <option value="">선택하세요</option>
+                                        <option value="과거실적">① 과거 실적 및 경험</option>
+                                        <option value="기술력">② 기술력 및 전문성</option>
+                                        <option value="가격">③ 가격 경쟁력</option>
+                                        <option value="인력">④ 인력 규모 및 조직력</option>
+                                        <option value="납기">⑤ 납기 준수 능력</option>
+                                        <option value="관계">⑥ 기존 협업 관계</option>
+                                        <option value="디지털">⑦ 디지털 역량 (BIM, AI 등)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2순위</td>
+                                <td>
+                                    <select name="q20_2" required>
+                                        <option value="">선택하세요</option>
+                                        <option value="과거실적">① 과거 실적 및 경험</option>
+                                        <option value="기술력">② 기술력 및 전문성</option>
+                                        <option value="가격">③ 가격 경쟁력</option>
+                                        <option value="인력">④ 인력 규모 및 조직력</option>
+                                        <option value="납기">⑤ 납기 준수 능력</option>
+                                        <option value="관계">⑥ 기존 협업 관계</option>
+                                        <option value="디지털">⑦ 디지털 역량 (BIM, AI 등)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3순위</td>
+                                <td>
+                                    <select name="q20_3" required>
+                                        <option value="">선택하세요</option>
+                                        <option value="과거실적">① 과거 실적 및 경험</option>
+                                        <option value="기술력">② 기술력 및 전문성</option>
+                                        <option value="가격">③ 가격 경쟁력</option>
+                                        <option value="인력">④ 인력 규모 및 조직력</option>
+                                        <option value="납기">⑤ 납기 준수 능력</option>
+                                        <option value="관계">⑥ 기존 협업 관계</option>
+                                        <option value="디지털">⑦ 디지털 역량 (BIM, AI 등)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q21">
+                    <div class="question-title">Q21. 귀사가 선호하는 엔지니어링사의 규모는? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q21" value="대형" required> ① 대형 (100인 이상)</label>
+                        <label><input type="radio" name="q21" value="중형"> ② 중형 (50~100인)</label>
+                        <label><input type="radio" name="q21" value="중소형"> ③ 중소형 (50인 이하)</label>
+                        <label><input type="radio" name="q21" value="무관"> ④ 규모 무관 (전문성 우선)</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q22">
+                    <div class="question-title">Q22. 향후 TESO ENGINEERING과 다음 분야에서 협업할 의향이 있으십니까? <span class="required">*</span></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:45%">사업 분야</th>
+                                <th>의향없음</th>
+                                <th>낮음</th>
+                                <th>보통</th>
+                                <th>높음</th>
+                                <th>매우높음</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 기술형입찰(TK/기술제안)</td>
+                                <td><input type="radio" name="q22a" value="1" required></td>
+                                <td><input type="radio" name="q22a" value="2"></td>
+                                <td><input type="radio" name="q22a" value="3"></td>
+                                <td><input type="radio" name="q22a" value="4"></td>
+                                <td><input type="radio" name="q22a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 민간투자사업</td>
+                                <td><input type="radio" name="q22b" value="1" required></td>
+                                <td><input type="radio" name="q22b" value="2"></td>
+                                <td><input type="radio" name="q22b" value="3"></td>
+                                <td><input type="radio" name="q22b" value="4"></td>
+                                <td><input type="radio" name="q22b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 철도/터널 실시설계</td>
+                                <td><input type="radio" name="q22c" value="1" required></td>
+                                <td><input type="radio" name="q22c" value="2"></td>
+                                <td><input type="radio" name="q22c" value="3"></td>
+                                <td><input type="radio" name="q22c" value="4"></td>
+                                <td><input type="radio" name="q22c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 도로/교량 설계</td>
+                                <td><input type="radio" name="q22d" value="1" required></td>
+                                <td><input type="radio" name="q22d" value="2"></td>
+                                <td><input type="radio" name="q22d" value="3"></td>
+                                <td><input type="radio" name="q22d" value="4"></td>
+                                <td><input type="radio" name="q22d" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>E. 물 사업 (상하수도, 수자원)</td>
+                                <td><input type="radio" name="q22e" value="1" required></td>
+                                <td><input type="radio" name="q22e" value="2"></td>
+                                <td><input type="radio" name="q22e" value="3"></td>
+                                <td><input type="radio" name="q22e" value="4"></td>
+                                <td><input type="radio" name="q22e" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>F. 에너지/환경 사업</td>
+                                <td><input type="radio" name="q22f" value="1" required></td>
+                                <td><input type="radio" name="q22f" value="2"></td>
+                                <td><input type="radio" name="q22f" value="3"></td>
+                                <td><input type="radio" name="q22f" value="4"></td>
+                                <td><input type="radio" name="q22f" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>G. 대형 프로젝트 (GTX 2기 등)</td>
+                                <td><input type="radio" name="q22g" value="1" required></td>
+                                <td><input type="radio" name="q22g" value="2"></td>
+                                <td><input type="radio" name="q22g" value="3"></td>
+                                <td><input type="radio" name="q22g" value="4"></td>
+                                <td><input type="radio" name="q22g" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q23">
+                    <div class="question-title">Q23. TESO ENGINEERING을 타 건설사에 추천할 의향은? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q23" value="적극추천" required> ① 적극 추천</label>
+                        <label><input type="radio" name="q23" value="추천"> ② 추천</label>
+                        <label><input type="radio" name="q23" value="보통"> ③ 보통</label>
+                        <label><input type="radio" name="q23" value="비추천"> ④ 비추천</label>
+                        <label><input type="radio" name="q23" value="적극비추천"> ⑤ 적극 비추천</label>
+                    </div>
+                </div>
+
+                <div class="part-title">Part 7. 디지털 전환 및 미래 대응</div>
+
+                <div class="question" id="q_q24">
+                    <div class="question-title">Q24. 엔지니어링 기업의 디지털 전환(DX) 역량이 협업 선정에 얼마나 중요합니까? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q24" value="매우중요" required> ① 매우 중요 (필수 고려사항)</label>
+                        <label><input type="radio" name="q24" value="중요"> ② 중요 (주요 가점 요소)</label>
+                        <label><input type="radio" name="q24" value="보통"> ③ 보통 (참고 요소)</label>
+                        <label><input type="radio" name="q24" value="낮음"> ④ 중요하지 않음</label>
+                        <label><input type="radio" name="q24" value="전혀없음"> ⑤ 전혀 고려하지 않음</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q25">
+                    <div class="question-title">Q25. TESO ENGINEERING의 다음 분야 준비 수준을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(0: 모름, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:45%">평가 항목</th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. BIM 기반 3D 설계 및 협업</td>
+                                <td><input type="radio" name="q25a" value="0" required></td>
+                                <td><input type="radio" name="q25a" value="1"></td>
+                                <td><input type="radio" name="q25a" value="2"></td>
+                                <td><input type="radio" name="q25a" value="3"></td>
+                                <td><input type="radio" name="q25a" value="4"></td>
+                                <td><input type="radio" name="q25a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 디지털 트윈 및 시뮬레이션</td>
+                                <td><input type="radio" name="q25b" value="0" required></td>
+                                <td><input type="radio" name="q25b" value="1"></td>
+                                <td><input type="radio" name="q25b" value="2"></td>
+                                <td><input type="radio" name="q25b" value="3"></td>
+                                <td><input type="radio" name="q25b" value="4"></td>
+                                <td><input type="radio" name="q25b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. AI/데이터 기반 설계 최적화</td>
+                                <td><input type="radio" name="q25c" value="0" required></td>
+                                <td><input type="radio" name="q25c" value="1"></td>
+                                <td><input type="radio" name="q25c" value="2"></td>
+                                <td><input type="radio" name="q25c" value="3"></td>
+                                <td><input type="radio" name="q25c" value="4"></td>
+                                <td><input type="radio" name="q25c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 클라우드 기반 협업 시스템</td>
+                                <td><input type="radio" name="q25d" value="0" required></td>
+                                <td><input type="radio" name="q25d" value="1"></td>
+                                <td><input type="radio" name="q25d" value="2"></td>
+                                <td><input type="radio" name="q25d" value="3"></td>
+                                <td><input type="radio" name="q25d" value="4"></td>
+                                <td><input type="radio" name="q25d" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="question" id="q_q26">
+                    <div class="question-title">Q26. ESG 및 지속가능성 대응이 협업 선정에 얼마나 중요합니까? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q26" value="매우중요" required> ① 매우 중요</label>
+                        <label><input type="radio" name="q26" value="중요"> ② 중요</label>
+                        <label><input type="radio" name="q26" value="보통"> ③ 보통</label>
+                        <label><input type="radio" name="q26" value="낮음"> ④ 중요하지 않음</label>
+                        <label><input type="radio" name="q26" value="전혀없음"> ⑤ 전혀 고려하지 않음</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q27">
+                    <div class="question-title">Q27. TESO ENGINEERING의 ESG 대응을 평가해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(0: 모름, 1: 매우 미흡 ~ 5: 매우 우수)</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:45%">평가 항목</th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. 탄소중립/저탄소 설계 반영</td>
+                                <td><input type="radio" name="q27a" value="0" required></td>
+                                <td><input type="radio" name="q27a" value="1"></td>
+                                <td><input type="radio" name="q27a" value="2"></td>
+                                <td><input type="radio" name="q27a" value="3"></td>
+                                <td><input type="radio" name="q27a" value="4"></td>
+                                <td><input type="radio" name="q27a" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>B. 친환경 공법 및 재료 적용</td>
+                                <td><input type="radio" name="q27b" value="0" required></td>
+                                <td><input type="radio" name="q27b" value="1"></td>
+                                <td><input type="radio" name="q27b" value="2"></td>
+                                <td><input type="radio" name="q27b" value="3"></td>
+                                <td><input type="radio" name="q27b" value="4"></td>
+                                <td><input type="radio" name="q27b" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>C. 기후변화 적응 설계</td>
+                                <td><input type="radio" name="q27c" value="0" required></td>
+                                <td><input type="radio" name="q27c" value="1"></td>
+                                <td><input type="radio" name="q27c" value="2"></td>
+                                <td><input type="radio" name="q27c" value="3"></td>
+                                <td><input type="radio" name="q27c" value="4"></td>
+                                <td><input type="radio" name="q27c" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>D. 중대재해 예방을 위한 안전관리</td>
+                                <td><input type="radio" name="q27d" value="0" required></td>
+                                <td><input type="radio" name="q27d" value="1"></td>
+                                <td><input type="radio" name="q27d" value="2"></td>
+                                <td><input type="radio" name="q27d" value="3"></td>
+                                <td><input type="radio" name="q27d" value="4"></td>
+                                <td><input type="radio" name="q27d" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>E. 청년/고령자 친화적 기업 및 장기근속</td>
+                                <td><input type="radio" name="q27e" value="0" required></td>
+                                <td><input type="radio" name="q27e" value="1"></td>
+                                <td><input type="radio" name="q27e" value="2"></td>
+                                <td><input type="radio" name="q27e" value="3"></td>
+                                <td><input type="radio" name="q27e" value="4"></td>
+                                <td><input type="radio" name="q27e" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>F. 투명한 입찰 및 윤리경영</td>
+                                <td><input type="radio" name="q27f" value="0" required></td>
+                                <td><input type="radio" name="q27f" value="1"></td>
+                                <td><input type="radio" name="q27f" value="2"></td>
+                                <td><input type="radio" name="q27f" value="3"></td>
+                                <td><input type="radio" name="q27f" value="4"></td>
+                                <td><input type="radio" name="q27f" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="part-title">Part 8. 종합 평가 및 제안</div>
+
+                <div class="question" id="q_q28">
+                    <div class="question-title">Q28. TESO ENGINEERING이 가장 우선적으로 강화해야 할 분야는? (2개까지 선택) <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="checkbox" name="q28" value="디지털"> ① 디지털 역량 (BIM, AI) 확보</label>
+                        <label><input type="checkbox" name="q28" value="인력"> ② 인력 확충 및 조직 확대</label>
+                        <label><input type="checkbox" name="q28" value="기술형입찰"> ③ 기술형입찰 경쟁력 강화(기술적 및 영업적)</label>
+                        <label><input type="checkbox" name="q28" value="해외"> ④ 해외 진출 역량</label>
+                        <label><input type="checkbox" name="q28" value="소통"> ⑤ 의사소통 및 협업 프로세스 개선</label>
+                        <label><input type="checkbox" name="q28" value="복합개발"> ⑥ 복합개발/신사업 발굴</label>
+                        <label><input type="checkbox" name="q28" value="현상유지"> ⑦ 현재 분야 유지 (충분함)</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q29">
+                    <div class="question-title">Q29. TESO ENGINEERING의 전반적인 경쟁력을 종합 평가한다면? <span class="required">*</span></div>
+                    <div class="options">
+                        <label><input type="radio" name="q29" value="매우우수" required> ① 매우 우수 (업계 상위 10%)</label>
+                        <label><input type="radio" name="q29" value="우수"> ② 우수 (업계 상위 30%)</label>
+                        <label><input type="radio" name="q29" value="보통"> ③ 보통 (업계 평균)</label>
+                        <label><input type="radio" name="q29" value="미흡"> ④ 미흡 (업계 하위 30%)</label>
+                        <label><input type="radio" name="q29" value="매우미흡"> ⑤ 매우 미흡 (업계 하위 10%)</label>
+                    </div>
+                </div>
+
+                <div class="question" id="q_q30">
+                    <div class="question-title">Q30. 기타 TESO ENGINEERING에 대한 의견이나 제안사항을 자유롭게 기술해 주십시오. <span class="required">*</span></div>
+                    <span class="note">(특히 GTX, 기술형입찰, 대심도 터널, 해저터널 등 전문분야에 대한 구체적 의견 환영)</span>
+                    <textarea name="q30" required placeholder="의견을 입력해 주세요. (없으실 경우 '없음'으로 기재 부탁드립니다)"></textarea>
+                </div>
+
+                <div class="info-section">
+                    <h3>📋 응답자 정보</h3>
+                    
+                    <div class="info-row" id="q_position">
+                        <label>직위 <span class="required">*</span></label>
+                        <input type="text" name="position" required placeholder="예: 부장, 차장, 과장">
+                    </div>
+                    
+                    <div class="info-row">
+                        <label>부서명</label>
+                        <input type="text" name="department" placeholder="선택사항">
+                    </div>
+                    
+                    <div class="info-row">
+                        <label>성함</label>
+                        <input type="text" name="name" placeholder="선택사항">
+                    </div>
+                    
+                    <div class="info-row" id="q_email">
+                        <label>이메일 (커피쿠폰 발송용) <span class="required">*</span></label>
+                        <input type="email" name="email" required placeholder="예: user@company.com (필수 입력)">
+                    </div>
+                </div>
+
+                <div id="successMessage" class="message success-message">
+                    ✓ 설문에 응답해 주셔서 진심으로 감사합니다!<br>
+                    응답이 성공적으로 제출되었습니다.<br>
+                    커피쿠폰은 입력하신 이메일로 발송됩니다.
+                </div>
+                
+                <div id="errorMessage" class="message error-message">
+                    ✗ 제출 중 오류가 발생했습니다.<br>
+                    <span id="errorDetail"></span><br>
+                    잠시 후 다시 시도해 주세요.
+                </div>
+
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn" id="submitBtn">설문 제출하기</button>
+                </div>
+            </form>
         </div>
 
-        <!-- 설문 폼 시작 -->
-        <form id="surveyForm">
-            
-            <!-- Part 1: 기본 정보 -->
-            <div class="part-title">Part 1. 기본 정보 및 협업 이력</div>
-            
-            <div class="question">
-                <div class="question-title">Q1. 귀사명을 입력해 주십시오. <span class="required">*</span></div>
-                <input type="text" name="company" required placeholder="예: 현대건설, 대림산업, GS건설 등">
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q2. TESO ENGINEERING과 기술형입찰(TK/기술제안) 협업 경험은? <span class="required">*</span></div>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="10회이상" required> ① 10회 이상</label>
-                    <label><input type="radio" name="q2" value="5-9회"> ② 5~9회</label>
-                    <label><input type="radio" name="q2" value="3-4회"> ③ 3~4회</label>
-                    <label><input type="radio" name="q2" value="1-2회"> ④ 1~2회</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q3. 협업한 사업 분야를 모두 선택해 주십시오. (중복선택 가능) <span class="required">*</span></div>
-                <div class="options">
-                    <label><input type="checkbox" name="q3" value="기술형입찰"> 기술형입찰(TK/기술제안)</label>
-                    <label><input type="checkbox" name="q3" value="철도설계"> 철도 설계 (GTX, 광역철도, 고속철도, 도시철도 등)</label>
-                    <label><input type="checkbox" name="q3" value="터널설계"> 터널 설계 (대심도, 해저터널 포함)</label>
-                    <label><input type="checkbox" name="q3" value="도로설계"> 도로/교량 설계</label>
-                    <label><input type="checkbox" name="q3" value="복합개발"> 복합개발/지하공간 설계</label>
-                    <label><input type="checkbox" name="q3" value="물사업"> 물 사업 (상하수도, 수자원)</label>
-                    <label><input type="checkbox" name="q3" value="에너지"> 에너지/환경 사업</label>
-                    <label><input type="checkbox" name="q3" value="기타"> 기타 <input type="text" name="q3_other" placeholder="직접 입력"></label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q4. 가장 최근 협업 프로젝트는 언제였습니까? <span class="required">*</span></div>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="6개월이내" required> ① 6개월 이내</label>
-                    <label><input type="radio" name="q4" value="6개월-1년"> ② 6개월~1년 이내</label>
-                    <label><input type="radio" name="q4" value="1-2년"> ③ 1~2년 이내</label>
-                    <label><input type="radio" name="q4" value="2-3년"> ④ 2~3년 이내</label>
-                    <label><input type="radio" name="q4" value="3년이상"> ⑤ 3년 이상</label>
-                </div>
-            </div>
-
-            <!-- Part 2: 인지도 및 주요 프로젝트 -->
-            <div class="part-title">Part 2. 인지도 및 주요 프로젝트</div>
-
-            <div class="question">
-                <div class="question-title">Q5. TESO ENGINEERING의 다음 주요 프로젝트를 알고 계십니까?</div>
-                <span class="note">각 프로젝트에 대해 선택해 주세요</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:45%">프로젝트</th>
-                            <th>잘 모름</th>
-                            <th>들어봄</th>
-                            <th>개요파악</th>
-                            <th>상세파악</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. GTX-A,B,C 기본계획 (최초 제안사)</td>
-                            <td><input type="radio" name="q5a" value="0"></td>
-                            <td><input type="radio" name="q5a" value="1"></td>
-                            <td><input type="radio" name="q5a" value="2"></td>
-                            <td><input type="radio" name="q5a" value="3"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 보령 해저터널 (FIDIC 어워드)</td>
-                            <td><input type="radio" name="q5b" value="0"></td>
-                            <td><input type="radio" name="q5b" value="1"></td>
-                            <td><input type="radio" name="q5b" value="2"></td>
-                            <td><input type="radio" name="q5b" value="3"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 압해-화원 해저터널</td>
-                            <td><input type="radio" name="q5c" value="0"></td>
-                            <td><input type="radio" name="q5c" value="1"></td>
-                            <td><input type="radio" name="q5c" value="2"></td>
-                            <td><input type="radio" name="q5c" value="3"></td>
-                        </tr>
-                        <tr>
-                            <td>D. GTX-B 기본 및 실시설계(민자사업)</td>
-                            <td><input type="radio" name="q5d" value="0"></td>
-                            <td><input type="radio" name="q5d" value="1"></td>
-                            <td><input type="radio" name="q5d" value="2"></td>
-                            <td><input type="radio" name="q5d" value="3"></td>
-                        </tr>
-                        <tr>
-                            <td>E. 동부간선도로 지하화</td>
-                            <td><input type="radio" name="q5e" value="0"></td>
-                            <td><input type="radio" name="q5e" value="1"></td>
-                            <td><input type="radio" name="q5e" value="2"></td>
-                            <td><input type="radio" name="q5e" value="3"></td>
-                        </tr>
-                        <tr>
-                            <td>F. 위례-신사선 경전철 기본 및 실시 설계(민자사업)</td>
-                            <td><input type="radio" name="q5f" value="0"></td>
-                            <td><input type="radio" name="q5f" value="1"></td>
-                            <td><input type="radio" name="q5f" value="2"></td>
-                            <td><input type="radio" name="q5f" value="3"></td>
-                        </tr>
-                        <tr>
-                            <td>G. 영동대로 복합환승센터 기본설계</td>
-                            <td><input type="radio" name="q5g" value="0"></td>
-                            <td><input type="radio" name="q5g" value="1"></td>
-                            <td><input type="radio" name="q5g" value="2"></td>
-                            <td><input type="radio" name="q5g" value="3"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q6. 위 프로젝트 중 가장 인상적인 것은? (2개까지 선택 가능)</div>
-                <div class="options">
-                    <label><input type="checkbox" name="q6" value="GTX기본계획"> ① GTX 사업 (최초 제안 및 기본계획)</label>
-                    <label><input type="checkbox" name="q6" value="보령해저터널"> ② 보령 해저터널 (FIDIC 어워드)</label>
-                    <label><input type="checkbox" name="q6" value="압해화원"> ③ 압해-화원 해저터널</label>
-                    <label><input type="checkbox" name="q6" value="GTX-B실시"> ④ GTX-B 기본 및 실시설계(민자사업)</label>
-                    <label><input type="checkbox" name="q6" value="동부간선"> ⑤ 동부간선도로 지하화</label>
-                    <label><input type="checkbox" name="q6" value="위례신사"> ⑥ 위례-신사선 경전철 기본 및 실시 설계(민자사업)</label>
-                    <label><input type="checkbox" name="q6" value="영동대로"> ⑦ 영동대로 복합환승센터 기본설계</label>
-                    <label><input type="checkbox" name="q6" value="기타"> ⑧ 기타 <input type="text" name="q6_other" placeholder="직접 입력"></label>
-                </div>
-            </div>
-
-            <!-- Part 3: 사업분야별 기술력 평가 -->
-            <div class="part-title">Part 3. 사업분야별 기술력 상세 평가</div>
-
-            <div class="question">
-                <div class="question-title">Q7. TESO ENGINEERING의 사업분야별 기술력을 평가해 주십시오.</div>
-                <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:40%">사업분야</th>
-                            <th>N/A</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 철도 (GTX/광역철도/고속철도, 도시철도)</td>
-                            <td><input type="radio" name="q7a" value="N/A"></td>
-                            <td><input type="radio" name="q7a" value="1"></td>
-                            <td><input type="radio" name="q7a" value="2"></td>
-                            <td><input type="radio" name="q7a" value="3"></td>
-                            <td><input type="radio" name="q7a" value="4"></td>
-                            <td><input type="radio" name="q7a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 터널 (대심도/해저/TBM/NATM)</td>
-                            <td><input type="radio" name="q7b" value="N/A"></td>
-                            <td><input type="radio" name="q7b" value="1"></td>
-                            <td><input type="radio" name="q7b" value="2"></td>
-                            <td><input type="radio" name="q7b" value="3"></td>
-                            <td><input type="radio" name="q7b" value="4"></td>
-                            <td><input type="radio" name="q7b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 도로 (도로/교량/지하차도)</td>
-                            <td><input type="radio" name="q7c" value="N/A"></td>
-                            <td><input type="radio" name="q7c" value="1"></td>
-                            <td><input type="radio" name="q7c" value="2"></td>
-                            <td><input type="radio" name="q7c" value="3"></td>
-                            <td><input type="radio" name="q7c" value="4"></td>
-                            <td><input type="radio" name="q7c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 에너지 (신재생/환경)</td>
-                            <td><input type="radio" name="q7d" value="N/A"></td>
-                            <td><input type="radio" name="q7d" value="1"></td>
-                            <td><input type="radio" name="q7d" value="2"></td>
-                            <td><input type="radio" name="q7d" value="3"></td>
-                            <td><input type="radio" name="q7d" value="4"></td>
-                            <td><input type="radio" name="q7d" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>E. 물 사업 (상하수도, 수자원)</td>
-                            <td><input type="radio" name="q7e" value="N/A"></td>
-                            <td><input type="radio" name="q7e" value="1"></td>
-                            <td><input type="radio" name="q7e" value="2"></td>
-                            <td><input type="radio" name="q7e" value="3"></td>
-                            <td><input type="radio" name="q7e" value="4"></td>
-                            <td><input type="radio" name="q7e" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>F. 복합개발/지하공간 설계</td>
-                            <td><input type="radio" name="q7f" value="N/A"></td>
-                            <td><input type="radio" name="q7f" value="1"></td>
-                            <td><input type="radio" name="q7f" value="2"></td>
-                            <td><input type="radio" name="q7f" value="3"></td>
-                            <td><input type="radio" name="q7f" value="4"></td>
-                            <td><input type="radio" name="q7f" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q8. 터널 사업 관련 세부 기술력을 평가해 주십시오.</div>
-                <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:40%">평가 항목</th>
-                            <th>N/A</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 대심도 터널 설계</td>
-                            <td><input type="radio" name="q8a" value="N/A"></td>
-                            <td><input type="radio" name="q8a" value="1"></td>
-                            <td><input type="radio" name="q8a" value="2"></td>
-                            <td><input type="radio" name="q8a" value="3"></td>
-                            <td><input type="radio" name="q8a" value="4"></td>
-                            <td><input type="radio" name="q8a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 해저터널 설계</td>
-                            <td><input type="radio" name="q8b" value="N/A"></td>
-                            <td><input type="radio" name="q8b" value="1"></td>
-                            <td><input type="radio" name="q8b" value="2"></td>
-                            <td><input type="radio" name="q8b" value="3"></td>
-                            <td><input type="radio" name="q8b" value="4"></td>
-                            <td><input type="radio" name="q8b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. TBM 공법 설계</td>
-                            <td><input type="radio" name="q8c" value="N/A"></td>
-                            <td><input type="radio" name="q8c" value="1"></td>
-                            <td><input type="radio" name="q8c" value="2"></td>
-                            <td><input type="radio" name="q8c" value="3"></td>
-                            <td><input type="radio" name="q8c" value="4"></td>
-                            <td><input type="radio" name="q8c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. NATM 공법 설계</td>
-                            <td><input type="radio" name="q8d" value="N/A"></td>
-                            <td><input type="radio" name="q8d" value="1"></td>
-                            <td><input type="radio" name="q8d" value="2"></td>
-                            <td><input type="radio" name="q8d" value="3"></td>
-                            <td><input type="radio" name="q8d" value="4"></td>
-                            <td><input type="radio" name="q8d" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>E. 지반조사 및 분석</td>
-                            <td><input type="radio" name="q8e" value="N/A"></td>
-                            <td><input type="radio" name="q8e" value="1"></td>
-                            <td><input type="radio" name="q8e" value="2"></td>
-                            <td><input type="radio" name="q8e" value="3"></td>
-                            <td><input type="radio" name="q8e" value="4"></td>
-                            <td><input type="radio" name="q8e" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q9. 철도 사업 관련 세부 기술력을 평가해 주십시오.</div>
-                <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:40%">평가 항목</th>
-                            <th>N/A</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. GTX/광역철도, 도시철도 계획 및 설계</td>
-                            <td><input type="radio" name="q9a" value="N/A"></td>
-                            <td><input type="radio" name="q9a" value="1"></td>
-                            <td><input type="radio" name="q9a" value="2"></td>
-                            <td><input type="radio" name="q9a" value="3"></td>
-                            <td><input type="radio" name="q9a" value="4"></td>
-                            <td><input type="radio" name="q9a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 고속철도 설계</td>
-                            <td><input type="radio" name="q9b" value="N/A"></td>
-                            <td><input type="radio" name="q9b" value="1"></td>
-                            <td><input type="radio" name="q9b" value="2"></td>
-                            <td><input type="radio" name="q9b" value="3"></td>
-                            <td><input type="radio" name="q9b" value="4"></td>
-                            <td><input type="radio" name="q9b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 철도 시스템 통합 역량</td>
-                            <td><input type="radio" name="q9c" value="N/A"></td>
-                            <td><input type="radio" name="q9c" value="1"></td>
-                            <td><input type="radio" name="q9c" value="2"></td>
-                            <td><input type="radio" name="q9c" value="3"></td>
-                            <td><input type="radio" name="q9c" value="4"></td>
-                            <td><input type="radio" name="q9c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 역사 및 부대시설 설계</td>
-                            <td><input type="radio" name="q9d" value="N/A"></td>
-                            <td><input type="radio" name="q9d" value="1"></td>
-                            <td><input type="radio" name="q9d" value="2"></td>
-                            <td><input type="radio" name="q9d" value="3"></td>
-                            <td><input type="radio" name="q9d" value="4"></td>
-                            <td><input type="radio" name="q9d" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q10. 도로 사업 관련 세부 기술력을 평가해 주십시오.</div>
-                <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:40%">평가 항목</th>
-                            <th>N/A</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 도로 설계 (간선도로, 지방도 등)</td>
-                            <td><input type="radio" name="q10a" value="N/A"></td>
-                            <td><input type="radio" name="q10a" value="1"></td>
-                            <td><input type="radio" name="q10a" value="2"></td>
-                            <td><input type="radio" name="q10a" value="3"></td>
-                            <td><input type="radio" name="q10a" value="4"></td>
-                            <td><input type="radio" name="q10a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 지하차도 설계</td>
-                            <td><input type="radio" name="q10b" value="N/A"></td>
-                            <td><input type="radio" name="q10b" value="1"></td>
-                            <td><input type="radio" name="q10b" value="2"></td>
-                            <td><input type="radio" name="q10b" value="3"></td>
-                            <td><input type="radio" name="q10b" value="4"></td>
-                            <td><input type="radio" name="q10b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 교통계획 및 분석</td>
-                            <td><input type="radio" name="q10c" value="N/A"></td>
-                            <td><input type="radio" name="q10c" value="1"></td>
-                            <td><input type="radio" name="q10c" value="2"></td>
-                            <td><input type="radio" name="q10c" value="3"></td>
-                            <td><input type="radio" name="q10c" value="4"></td>
-                            <td><input type="radio" name="q10c" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q11. 구조 분야 세부 기술력을 평가해 주십시오.</div>
-                <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:40%">평가 항목</th>
-                            <th>N/A</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 교량 설계</td>
-                            <td><input type="radio" name="q11a" value="N/A"></td>
-                            <td><input type="radio" name="q11a" value="1"></td>
-                            <td><input type="radio" name="q11a" value="2"></td>
-                            <td><input type="radio" name="q11a" value="3"></td>
-                            <td><input type="radio" name="q11a" value="4"></td>
-                            <td><input type="radio" name="q11a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 구조해석 및 설계</td>
-                            <td><input type="radio" name="q11b" value="N/A"></td>
-                            <td><input type="radio" name="q11b" value="1"></td>
-                            <td><input type="radio" name="q11b" value="2"></td>
-                            <td><input type="radio" name="q11b" value="3"></td>
-                            <td><input type="radio" name="q11b" value="4"></td>
-                            <td><input type="radio" name="q11b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 내진설계</td>
-                            <td><input type="radio" name="q11c" value="N/A"></td>
-                            <td><input type="radio" name="q11c" value="1"></td>
-                            <td><input type="radio" name="q11c" value="2"></td>
-                            <td><input type="radio" name="q11c" value="3"></td>
-                            <td><input type="radio" name="q11c" value="4"></td>
-                            <td><input type="radio" name="q11c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 지하구조물 설계</td>
-                            <td><input type="radio" name="q11d" value="N/A"></td>
-                            <td><input type="radio" name="q11d" value="1"></td>
-                            <td><input type="radio" name="q11d" value="2"></td>
-                            <td><input type="radio" name="q11d" value="3"></td>
-                            <td><input type="radio" name="q11d" value="4"></td>
-                            <td><input type="radio" name="q11d" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q12. 물 사업 세부 기술력을 평가해 주십시오.</div>
-                <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:40%">평가 항목</th>
-                            <th>N/A</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 상수도 설계</td>
-                            <td><input type="radio" name="q12a" value="N/A"></td>
-                            <td><input type="radio" name="q12a" value="1"></td>
-                            <td><input type="radio" name="q12a" value="2"></td>
-                            <td><input type="radio" name="q12a" value="3"></td>
-                            <td><input type="radio" name="q12a" value="4"></td>
-                            <td><input type="radio" name="q12a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 하수도 설계</td>
-                            <td><input type="radio" name="q12b" value="N/A"></td>
-                            <td><input type="radio" name="q12b" value="1"></td>
-                            <td><input type="radio" name="q12b" value="2"></td>
-                            <td><input type="radio" name="q12b" value="3"></td>
-                            <td><input type="radio" name="q12b" value="4"></td>
-                            <td><input type="radio" name="q12b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 수처리 시설 설계</td>
-                            <td><input type="radio" name="q12c" value="N/A"></td>
-                            <td><input type="radio" name="q12c" value="1"></td>
-                            <td><input type="radio" name="q12c" value="2"></td>
-                            <td><input type="radio" name="q12c" value="3"></td>
-                            <td><input type="radio" name="q12c" value="4"></td>
-                            <td><input type="radio" name="q12c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 수자원 설계</td>
-                            <td><input type="radio" name="q12d" value="N/A"></td>
-                            <td><input type="radio" name="q12d" value="1"></td>
-                            <td><input type="radio" name="q12d" value="2"></td>
-                            <td><input type="radio" name="q12d" value="3"></td>
-                            <td><input type="radio" name="q12d" value="4"></td>
-                            <td><input type="radio" name="q12d" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q13. 에너지 사업 세부 기술력을 평가해 주십시오.</div>
-                <span class="note">(N/A: 경험없음, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:40%">평가 항목</th>
-                            <th>N/A</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 신재생에너지 설계</td>
-                            <td><input type="radio" name="q13a" value="N/A"></td>
-                            <td><input type="radio" name="q13a" value="1"></td>
-                            <td><input type="radio" name="q13a" value="2"></td>
-                            <td><input type="radio" name="q13a" value="3"></td>
-                            <td><input type="radio" name="q13a" value="4"></td>
-                            <td><input type="radio" name="q13a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 환경영향평가</td>
-                            <td><input type="radio" name="q13b" value="N/A"></td>
-                            <td><input type="radio" name="q13b" value="1"></td>
-                            <td><input type="radio" name="q13b" value="2"></td>
-                            <td><input type="radio" name="q13b" value="3"></td>
-                            <td><input type="radio" name="q13b" value="4"></td>
-                            <td><input type="radio" name="q13b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 에너지 효율화 설계(전력구)</td>
-                            <td><input type="radio" name="q13c" value="N/A"></td>
-                            <td><input type="radio" name="q13c" value="1"></td>
-                            <td><input type="radio" name="q13c" value="2"></td>
-                            <td><input type="radio" name="q13c" value="3"></td>
-                            <td><input type="radio" name="q13c" value="4"></td>
-                            <td><input type="radio" name="q13c" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Part 4: 기술형입찰 역량 평가 -->
-            <div class="part-title">Part 4. 기술형입찰(TK) 역량 평가</div>
-
-            <div class="question">
-                <div class="question-title">Q14. 기술형입찰 사업에서 TESO ENGINEERING의 역량을 평가해 주십시오.</div>
-                <span class="note">(1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:50%">평가 항목</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 기술제안서 창의성 및 실현가능성</td>
-                            <td><input type="radio" name="q14a" value="1"></td>
-                            <td><input type="radio" name="q14a" value="2"></td>
-                            <td><input type="radio" name="q14a" value="3"></td>
-                            <td><input type="radio" name="q14a" value="4"></td>
-                            <td><input type="radio" name="q14a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 원가분석 경쟁력</td>
-                            <td><input type="radio" name="q14b" value="1"></td>
-                            <td><input type="radio" name="q14b" value="2"></td>
-                            <td><input type="radio" name="q14b" value="3"></td>
-                            <td><input type="radio" name="q14b" value="4"></td>
-                            <td><input type="radio" name="q14b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 제안서 완성도 (도면, 보고서 품질)</td>
-                            <td><input type="radio" name="q14c" value="1"></td>
-                            <td><input type="radio" name="q14c" value="2"></td>
-                            <td><input type="radio" name="q14c" value="3"></td>
-                            <td><input type="radio" name="q14c" value="4"></td>
-                            <td><input type="radio" name="q14c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 제안 일정 준수</td>
-                            <td><input type="radio" name="q14d" value="1"></td>
-                            <td><input type="radio" name="q14d" value="2"></td>
-                            <td><input type="radio" name="q14d" value="3"></td>
-                            <td><input type="radio" name="q14d" value="4"></td>
-                            <td><input type="radio" name="q14d" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>E. VE (가치공학) 제안 능력</td>
-                            <td><input type="radio" name="q14e" value="1"></td>
-                            <td><input type="radio" name="q14e" value="2"></td>
-                            <td><input type="radio" name="q14e" value="3"></td>
-                            <td><input type="radio" name="q14e" value="4"></td>
-                            <td><input type="radio" name="q14e" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q15. 기술형입찰 사업에서 TESO ENGINEERING과 협업 시 가장 큰 강점은?</div>
-                <div class="options">
-                    <label><input type="radio" name="q15" value="기술력창의성"> ① 기술력과 창의성</label>
-                    <label><input type="radio" name="q15" value="작성속도"> ② 제안서 작성 속도</label>
-                    <label><input type="radio" name="q15" value="원가경쟁력"> ③ 원가분석 경쟁력</label>
-                    <label><input type="radio" name="q15" value="과거실적"> ④ 과거 수행 실적</label>
-                    <label><input type="radio" name="q15" value="협업태도"> ⑤ 협업 태도 및 유연성</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q16. 기술형입찰 사업에서 가장 개선이 필요한 부분은?</div>
-                <div class="options">
-                    <label><input type="radio" name="q16" value="창의성"> ① 기술제안 창의성</label>
-                    <label><input type="radio" name="q16" value="원가절감"> ② 원가 절감 노력</label>
-                    <label><input type="radio" name="q16" value="완성도"> ③ 제안서 완성도</label>
-                    <label><input type="radio" name="q16" value="일정준수"> ④ 일정 준수</label>
-                    <label><input type="radio" name="q16" value="없음"> ⑤ 특별히 없음</label>
-                </div>
-            </div>
-
-            <!-- Part 5: 전반적 업무 수행 평가 -->
-            <div class="part-title">Part 5. 전반적 업무 수행 평가</div>
-
-            <div class="question">
-                <div class="question-title">Q17. TESO ENGINEERING의 프로젝트 수행 전반을 평가해 주십시오.</div>
-                <span class="note">(1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:50%">평가 항목</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 프로젝트 수행 성실도</td>
-                            <td><input type="radio" name="q17a" value="1"></td>
-                            <td><input type="radio" name="q17a" value="2"></td>
-                            <td><input type="radio" name="q17a" value="3"></td>
-                            <td><input type="radio" name="q17a" value="4"></td>
-                            <td><input type="radio" name="q17a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 납기 및 일정 준수</td>
-                            <td><input type="radio" name="q17b" value="1"></td>
-                            <td><input type="radio" name="q17b" value="2"></td>
-                            <td><input type="radio" name="q17b" value="3"></td>
-                            <td><input type="radio" name="q17b" value="4"></td>
-                            <td><input type="radio" name="q17b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 설계 품질 (도면 정확도, 완성도)</td>
-                            <td><input type="radio" name="q17c" value="1"></td>
-                            <td><input type="radio" name="q17c" value="2"></td>
-                            <td><input type="radio" name="q17c" value="3"></td>
-                            <td><input type="radio" name="q17c" value="4"></td>
-                            <td><input type="radio" name="q17c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 의사소통 및 피드백 신속성</td>
-                            <td><input type="radio" name="q17d" value="1"></td>
-                            <td><input type="radio" name="q17d" value="2"></td>
-                            <td><input type="radio" name="q17d" value="3"></td>
-                            <td><input type="radio" name="q17d" value="4"></td>
-                            <td><input type="radio" name="q17d" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>E. 변경사항 대응 유연성</td>
-                            <td><input type="radio" name="q17e" value="1"></td>
-                            <td><input type="radio" name="q17e" value="2"></td>
-                            <td><input type="radio" name="q17e" value="3"></td>
-                            <td><input type="radio" name="q17e" value="4"></td>
-                            <td><input type="radio" name="q17e" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>F. 사후 관리 및 지원</td>
-                            <td><input type="radio" name="q17f" value="1"></td>
-                            <td><input type="radio" name="q17f" value="2"></td>
-                            <td><input type="radio" name="q17f" value="3"></td>
-                            <td><input type="radio" name="q17f" value="4"></td>
-                            <td><input type="radio" name="q17f" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q18. TESO ENGINEERING과의 협업에서 가장 만족스러웠던 점은?</div>
-                <div class="options">
-                    <label><input type="radio" name="q18" value="기술력"> ① 전문 기술력</label>
-                    <label><input type="radio" name="q18" value="성실성"> ② 성실한 업무 수행</label>
-                    <label><input type="radio" name="q18" value="소통"> ③ 원활한 의사소통</label>
-                    <label><input type="radio" name="q18" value="일정"> ④ 일정 준수</label>
-                    <label><input type="radio" name="q18" value="문제해결"> ⑤ 적극적인 문제 해결</label>
-                    <label><input type="radio" name="q18" value="사후관리"> ⑥ 사후 관리 및 지원</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q19. TESO ENGINEERING과의 협업에서 가장 불만족스러웠던 점은?</div>
-                <div class="options">
-                    <label><input type="radio" name="q19" value="기술력부족"> ① 기술력 부족</label>
-                    <label><input type="radio" name="q19" value="일정지연"> ② 일정 지연</label>
-                    <label><input type="radio" name="q19" value="의사소통"> ③ 의사소통 미흡</label>
-                    <label><input type="radio" name="q19" value="완성도"> ④ 결과물 완성도 부족</label>
-                    <label><input type="radio" name="q19" value="대응능력"> ⑤ 문제 대응 능력 부족</label>
-                    <label><input type="radio" name="q19" value="사후관리"> ⑥ 사후 관리 및 지원</label>
-                    <label><input type="radio" name="q19" value="없음"> ⑦ 특별히 없음</label>
-                </div>
-            </div>
-
-            <!-- Part 6: 향후 협업 및 시장 선정 기준 -->
-            <div class="part-title">Part 6. 향후 협업 및 시장 선정 기준</div>
-
-            <div class="question">
-                <div class="question-title">Q20. 최근 3년간 기술형입찰/설계 사업에서 엔지니어링사 선정 시 가장 중요한 기준을 순서대로 선택해 주십시오.</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:20%">순위</th>
-                            <th>선택 (해당 번호 선택)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1순위</td>
-                            <td>
-                                <select name="q20_1">
-                                    <option value="">선택하세요</option>
-                                    <option value="과거실적">① 과거 실적 및 경험</option>
-                                    <option value="기술력">② 기술력 및 전문성</option>
-                                    <option value="가격">③ 가격 경쟁력</option>
-                                    <option value="인력">④ 인력 규모 및 조직력</option>
-                                    <option value="납기">⑤ 납기 준수 능력</option>
-                                    <option value="관계">⑥ 기존 협업 관계</option>
-                                    <option value="디지털">⑦ 디지털 역량 (BIM, AI 등)</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2순위</td>
-                            <td>
-                                <select name="q20_2">
-                                    <option value="">선택하세요</option>
-                                    <option value="과거실적">① 과거 실적 및 경험</option>
-                                    <option value="기술력">② 기술력 및 전문성</option>
-                                    <option value="가격">③ 가격 경쟁력</option>
-                                    <option value="인력">④ 인력 규모 및 조직력</option>
-                                    <option value="납기">⑤ 납기 준수 능력</option>
-                                    <option value="관계">⑥ 기존 협업 관계</option>
-                                    <option value="디지털">⑦ 디지털 역량 (BIM, AI 등)</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3순위</td>
-                            <td>
-                                <select name="q20_3">
-                                    <option value="">선택하세요</option>
-                                    <option value="과거실적">① 과거 실적 및 경험</option>
-                                    <option value="기술력">② 기술력 및 전문성</option>
-                                    <option value="가격">③ 가격 경쟁력</option>
-                                    <option value="인력">④ 인력 규모 및 조직력</option>
-                                    <option value="납기">⑤ 납기 준수 능력</option>
-                                    <option value="관계">⑥ 기존 협업 관계</option>
-                                    <option value="디지털">⑦ 디지털 역량 (BIM, AI 등)</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q21. 귀사가 선호하는 엔지니어링사의 규모는?</div>
-                <div class="options">
-                    <label><input type="radio" name="q21" value="대형"> ① 대형 (100인 이상)</label>
-                    <label><input type="radio" name="q21" value="중형"> ② 중형 (50~100인)</label>
-                    <label><input type="radio" name="q21" value="중소형"> ③ 중소형 (50인 이하)</label>
-                    <label><input type="radio" name="q21" value="무관"> ④ 규모 무관 (전문성 우선)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q22. 향후 TESO ENGINEERING과 다음 분야에서 협업할 의향이 있으십니까?</div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:45%">사업 분야</th>
-                            <th>의향없음</th>
-                            <th>낮음</th>
-                            <th>보통</th>
-                            <th>높음</th>
-                            <th>매우높음</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 기술형입찰(TK/기술제안)</td>
-                            <td><input type="radio" name="q22a" value="1"></td>
-                            <td><input type="radio" name="q22a" value="2"></td>
-                            <td><input type="radio" name="q22a" value="3"></td>
-                            <td><input type="radio" name="q22a" value="4"></td>
-                            <td><input type="radio" name="q22a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 민간투자사업</td>
-                            <td><input type="radio" name="q22b" value="1"></td>
-                            <td><input type="radio" name="q22b" value="2"></td>
-                            <td><input type="radio" name="q22b" value="3"></td>
-                            <td><input type="radio" name="q22b" value="4"></td>
-                            <td><input type="radio" name="q22b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 철도/터널 실시설계</td>
-                            <td><input type="radio" name="q22c" value="1"></td>
-                            <td><input type="radio" name="q22c" value="2"></td>
-                            <td><input type="radio" name="q22c" value="3"></td>
-                            <td><input type="radio" name="q22c" value="4"></td>
-                            <td><input type="radio" name="q22c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 도로/교량 설계</td>
-                            <td><input type="radio" name="q22d" value="1"></td>
-                            <td><input type="radio" name="q22d" value="2"></td>
-                            <td><input type="radio" name="q22d" value="3"></td>
-                            <td><input type="radio" name="q22d" value="4"></td>
-                            <td><input type="radio" name="q22d" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>E. 물 사업 (상하수도, 수자원)</td>
-                            <td><input type="radio" name="q22e" value="1"></td>
-                            <td><input type="radio" name="q22e" value="2"></td>
-                            <td><input type="radio" name="q22e" value="3"></td>
-                            <td><input type="radio" name="q22e" value="4"></td>
-                            <td><input type="radio" name="q22e" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>F. 에너지/환경 사업</td>
-                            <td><input type="radio" name="q22f" value="1"></td>
-                            <td><input type="radio" name="q22f" value="2"></td>
-                            <td><input type="radio" name="q22f" value="3"></td>
-                            <td><input type="radio" name="q22f" value="4"></td>
-                            <td><input type="radio" name="q22f" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>G. 대형 프로젝트 (GTX 2기 등)</td>
-                            <td><input type="radio" name="q22g" value="1"></td>
-                            <td><input type="radio" name="q22g" value="2"></td>
-                            <td><input type="radio" name="q22g" value="3"></td>
-                            <td><input type="radio" name="q22g" value="4"></td>
-                            <td><input type="radio" name="q22g" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q23. TESO ENGINEERING을 타 건설사에 추천할 의향은?</div>
-                <div class="options">
-                    <label><input type="radio" name="q23" value="적극추천"> ① 적극 추천</label>
-                    <label><input type="radio" name="q23" value="추천"> ② 추천</label>
-                    <label><input type="radio" name="q23" value="보통"> ③ 보통</label>
-                    <label><input type="radio" name="q23" value="비추천"> ④ 비추천</label>
-                    <label><input type="radio" name="q23" value="적극비추천"> ⑤ 적극 비추천</label>
-                </div>
-            </div>
-
-            <!-- Part 7: 디지털 전환 및 미래 대응 -->
-            <div class="part-title">Part 7. 디지털 전환 및 미래 대응</div>
-
-            <div class="question">
-                <div class="question-title">Q24. 엔지니어링 기업의 디지털 전환(DX) 역량이 협업 선정에 얼마나 중요합니까?</div>
-                <div class="options">
-                    <label><input type="radio" name="q24" value="매우중요"> ① 매우 중요 (필수 고려사항)</label>
-                    <label><input type="radio" name="q24" value="중요"> ② 중요 (주요 가점 요소)</label>
-                    <label><input type="radio" name="q24" value="보통"> ③ 보통 (참고 요소)</label>
-                    <label><input type="radio" name="q24" value="낮음"> ④ 중요하지 않음</label>
-                    <label><input type="radio" name="q24" value="전혀없음"> ⑤ 전혀 고려하지 않음</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q25. TESO ENGINEERING의 다음 분야 준비 수준을 평가해 주십시오.</div>
-                <span class="note">(0: 모름, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:45%">평가 항목</th>
-                            <th>0</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. BIM 기반 3D 설계 및 협업</td>
-                            <td><input type="radio" name="q25a" value="0"></td>
-                            <td><input type="radio" name="q25a" value="1"></td>
-                            <td><input type="radio" name="q25a" value="2"></td>
-                            <td><input type="radio" name="q25a" value="3"></td>
-                            <td><input type="radio" name="q25a" value="4"></td>
-                            <td><input type="radio" name="q25a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 디지털 트윈 및 시뮬레이션</td>
-                            <td><input type="radio" name="q25b" value="0"></td>
-                            <td><input type="radio" name="q25b" value="1"></td>
-                            <td><input type="radio" name="q25b" value="2"></td>
-                            <td><input type="radio" name="q25b" value="3"></td>
-                            <td><input type="radio" name="q25b" value="4"></td>
-                            <td><input type="radio" name="q25b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. AI/데이터 기반 설계 최적화</td>
-                            <td><input type="radio" name="q25c" value="0"></td>
-                            <td><input type="radio" name="q25c" value="1"></td>
-                            <td><input type="radio" name="q25c" value="2"></td>
-                            <td><input type="radio" name="q25c" value="3"></td>
-                            <td><input type="radio" name="q25c" value="4"></td>
-                            <td><input type="radio" name="q25c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 클라우드 기반 협업 시스템</td>
-                            <td><input type="radio" name="q25d" value="0"></td>
-                            <td><input type="radio" name="q25d" value="1"></td>
-                            <td><input type="radio" name="q25d" value="2"></td>
-                            <td><input type="radio" name="q25d" value="3"></td>
-                            <td><input type="radio" name="q25d" value="4"></td>
-                            <td><input type="radio" name="q25d" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q26. ESG 및 지속가능성 대응이 협업 선정에 얼마나 중요합니까?</div>
-                <div class="options">
-                    <label><input type="radio" name="q26" value="매우중요"> ① 매우 중요</label>
-                    <label><input type="radio" name="q26" value="중요"> ② 중요</label>
-                    <label><input type="radio" name="q26" value="보통"> ③ 보통</label>
-                    <label><input type="radio" name="q26" value="낮음"> ④ 중요하지 않음</label>
-                    <label><input type="radio" name="q26" value="전혀없음"> ⑤ 전혀 고려하지 않음</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q27. TESO ENGINEERING의 ESG 대응을 평가해 주십시오.</div>
-                <span class="note">(0: 모름, 1: 매우 미흡 ~ 5: 매우 우수)</span>
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width:45%">평가 항목</th>
-                            <th>0</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>A. 탄소중립/저탄소 설계 반영</td>
-                            <td><input type="radio" name="q27a" value="0"></td>
-                            <td><input type="radio" name="q27a" value="1"></td>
-                            <td><input type="radio" name="q27a" value="2"></td>
-                            <td><input type="radio" name="q27a" value="3"></td>
-                            <td><input type="radio" name="q27a" value="4"></td>
-                            <td><input type="radio" name="q27a" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>B. 친환경 공법 및 재료 적용</td>
-                            <td><input type="radio" name="q27b" value="0"></td>
-                            <td><input type="radio" name="q27b" value="1"></td>
-                            <td><input type="radio" name="q27b" value="2"></td>
-                            <td><input type="radio" name="q27b" value="3"></td>
-                            <td><input type="radio" name="q27b" value="4"></td>
-                            <td><input type="radio" name="q27b" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>C. 기후변화 적응 설계</td>
-                            <td><input type="radio" name="q27c" value="0"></td>
-                            <td><input type="radio" name="q27c" value="1"></td>
-                            <td><input type="radio" name="q27c" value="2"></td>
-                            <td><input type="radio" name="q27c" value="3"></td>
-                            <td><input type="radio" name="q27c" value="4"></td>
-                            <td><input type="radio" name="q27c" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>D. 중대재해 예방을 위한 안전관리</td>
-                            <td><input type="radio" name="q27d" value="0"></td>
-                            <td><input type="radio" name="q27d" value="1"></td>
-                            <td><input type="radio" name="q27d" value="2"></td>
-                            <td><input type="radio" name="q27d" value="3"></td>
-                            <td><input type="radio" name="q27d" value="4"></td>
-                            <td><input type="radio" name="q27d" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>E. 청년/고령자 친화적 기업 및 장기근속</td>
-                            <td><input type="radio" name="q27e" value="0"></td>
-                            <td><input type="radio" name="q27e" value="1"></td>
-                            <td><input type="radio" name="q27e" value="2"></td>
-                            <td><input type="radio" name="q27e" value="3"></td>
-                            <td><input type="radio" name="q27e" value="4"></td>
-                            <td><input type="radio" name="q27e" value="5"></td>
-                        </tr>
-                        <tr>
-                            <td>F. 투명한 입찰 및 윤리경영</td>
-                            <td><input type="radio" name="q27f" value="0"></td>
-                            <td><input type="radio" name="q27f" value="1"></td>
-                            <td><input type="radio" name="q27f" value="2"></td>
-                            <td><input type="radio" name="q27f" value="3"></td>
-                            <td><input type="radio" name="q27f" value="4"></td>
-                            <td><input type="radio" name="q27f" value="5"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Part 8: 종합 평가 및 제안 -->
-            <div class="part-title">Part 8. 종합 평가 및 제안</div>
-
-            <div class="question">
-                <div class="question-title">Q28. TESO ENGINEERING이 가장 우선적으로 강화해야 할 분야는? (2개까지 선택)</div>
-                <div class="options">
-                    <label><input type="checkbox" name="q28" value="디지털"> ① 디지털 역량 (BIM, AI) 확보</label>
-                    <label><input type="checkbox" name="q28" value="인력"> ② 인력 확충 및 조직 확대</label>
-                    <label><input type="checkbox" name="q28" value="기술형입찰"> ③ 기술형입찰 경쟁력 강화(기술적 및 영업적)</label>
-                    <label><input type="checkbox" name="q28" value="해외"> ④ 해외 진출 역량</label>
-                    <label><input type="checkbox" name="q28" value="소통"> ⑤ 의사소통 및 협업 프로세스 개선</label>
-                    <label><input type="checkbox" name="q28" value="복합개발"> ⑥ 복합개발/신사업 발굴</label>
-                    <label><input type="checkbox" name="q28" value="현상유지"> ⑦ 현재 분야 유지 (충분함)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q29. TESO ENGINEERING의 전반적인 경쟁력을 종합 평가한다면?</div>
-                <div class="options">
-                    <label><input type="radio" name="q29" value="매우우수"> ① 매우 우수 (업계 상위 10%)</label>
-                    <label><input type="radio" name="q29" value="우수"> ② 우수 (업계 상위 30%)</label>
-                    <label><input type="radio" name="q29" value="보통"> ③ 보통 (업계 평균)</label>
-                    <label><input type="radio" name="q29" value="미흡"> ④ 미흡 (업계 하위 30%)</label>
-                    <label><input type="radio" name="q29" value="매우미흡"> ⑤ 매우 미흡 (업계 하위 10%)</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-title">Q30. 기타 TESO ENGINEERING에 대한 의견이나 제안사항을 자유롭게 기술해 주십시오.</div>
-                <span class="note">(특히 GTX, 기술형입찰, 대심도 터널, 해저터널 등 전문분야에 대한 구체적 의견 환영)</span>
-                <textarea name="q30" placeholder="의견을 입력해 주세요."></textarea>
-            </div>
-
-            <!-- 응답자 정보 -->
-            <div class="info-section">
-                <h3>📋 응답자 정보</h3>
-                
-                <div class="info-row">
-                    <label>직위 <span class="required">*</span></label>
-                    <input type="text" name="position" required placeholder="예: 부장, 차장, 과장">
-                </div>
-                
-                <div class="info-row">
-                    <label>부서명</label>
-                    <input type="text" name="department" placeholder="선택사항">
-                </div>
-                
-                <div class="info-row">
-                    <label>성함</label>
-                    <input type="text" name="name" placeholder="선택사항">
-                </div>
-                
-                <div class="info-row">
-                    <label>이메일 (커피쿠폰 발송용)</label>
-                    <input type="email" name="email" placeholder="선택사항">
-                </div>
-            </div>
-
-            <!-- 메시지 영역 -->
-            <div id="successMessage" class="message success-message">
-                ✓ 설문에 응답해 주셔서 진심으로 감사합니다!<br>
-                응답이 성공적으로 제출되었습니다.<br>
-                커피쿠폰은 입력하신 이메일로 발송됩니다.
-            </div>
-            
-            <div id="errorMessage" class="message error-message">
-                ✗ 제출 중 오류가 발생했습니다.<br>
-                <span id="errorDetail"></span><br>
-                잠시 후 다시 시도해 주세요.
-            </div>
-
-            <!-- 제출 버튼 -->
-            <div class="submit-section">
-                <button type="submit" class="submit-btn" id="submitBtn">설문 제출하기</button>
-            </div>
-        </form>
-
-        <!-- Footer -->
         <div class="footer">
             <p style="margin-bottom:10px;"><strong>설문에 응답해 주셔서 진심으로 감사합니다.</strong></p>
             <p style="margin-bottom:12px;">본 설문은 익명으로 처리되며(회사명/직위 제외), 서비스 개선 목적으로만 활용됩니다.</p>
@@ -1477,17 +1482,27 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
     <script>
-        // Google Apps Script Web App URL 입력
+        // Google Apps Script Web App URL
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLIJ3VLyF94meeSYag37OIv-zn4falALSb2UoIGSwa6_YmtfXGSbfy54LJiUbckT_Q/exec';
         
         // DOM 요소
         const form = document.getElementById('surveyForm');
+        const surveyContent = document.getElementById('surveyContent');
+        const alreadySubmitted = document.getElementById('alreadySubmitted');
         const submitBtn = document.getElementById('submitBtn');
         const successMsg = document.getElementById('successMessage');
         const errorMsg = document.getElementById('errorMessage');
         const errorDetail = document.getElementById('errorDetail');
+
+        // [중복 방지 1단계] 페이지 로드 시 로컬 스토리지 확인
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('teso_survey_submitted')) {
+                // 이미 제출했다면 폼을 숨기고 메시지 표시
+                surveyContent.style.display = 'none';
+                alreadySubmitted.style.display = 'block';
+            }
+        });
 
         // Q6 체크박스 개수 제한 (최대 2개)
         document.querySelectorAll('input[name="q6"]').forEach(checkbox => {
@@ -1511,46 +1526,95 @@
             });
         });
 
+        // 폼 검증 함수
+        function validateForm() {
+            // 1. 체크박스 그룹 검증 (Q3, Q6, Q28은 하나 이상 선택 필수)
+            const checkboxGroups = [
+                { name: 'q3', label: 'Q3. 협업한 사업 분야' },
+                { name: 'q6', label: 'Q6. 가장 인상적인 프로젝트' },
+                { name: 'q28', label: 'Q28. 강화해야 할 분야' }
+            ];
+
+            for (const group of checkboxGroups) {
+                const checked = document.querySelectorAll(`input[name="${group.name}"]:checked`);
+                if (checked.length === 0) {
+                    alert(`${group.label} 항목을 최소 1개 이상 선택해 주세요.`);
+                    const element = document.getElementById(`q_${group.name}`);
+                    if(element) element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    return false;
+                }
+            }
+
+            // 2. 브라우저 기본 required 검증
+            if (!form.checkValidity()) {
+                const invalidInput = form.querySelector('input:invalid, select:invalid, textarea:invalid');
+                if (invalidInput) {
+                    if (invalidInput.type === 'radio') {
+                        let qTitle = "해당 문항";
+                        const parent = invalidInput.closest('tr') || invalidInput.closest('.question');
+                        if (parent) {
+                            if (invalidInput.closest('tr')) {
+                                const rowHeader = parent.querySelector('td:first-child');
+                                if(rowHeader) qTitle = rowHeader.innerText;
+                            } else {
+                                const titleEl = parent.querySelector('.question-title');
+                                if(titleEl) qTitle = titleEl.innerText.split('.')[0];
+                            }
+                        }
+                        alert(`${qTitle} 항목을 선택해 주세요.`);
+                    } else if (invalidInput.name === 'email') {
+                         alert('커피쿠폰 발송을 위해 이메일을 입력해 주세요.');
+                    } else if (invalidInput.name === 'company') {
+                         alert('귀사명을 입력해 주세요.');
+                    } else if (invalidInput.name === 'position') {
+                         alert('직위를 입력해 주세요.');
+                    } else if (invalidInput.name === 'q30') {
+                        alert('Q30 의견을 입력해 주세요. (없으면 "없음" 입력)');
+                    } else {
+                        alert('필수 항목을 모두 입력/선택해 주세요.');
+                    }
+                    invalidInput.focus();
+                    invalidInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return false;
+            }
+            return true;
+        }
+
         // 폼 제출 이벤트
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // URL 체크
+            if (!validateForm()) return;
+
             if (SCRIPT_URL.includes('YOUR_DEPLOYMENT_ID')) {
                 alert('⚠️ 관리자에게 문의하세요.\n\nGoogle Apps Script 배포 URL이 설정되지 않았습니다.');
                 return;
             }
             
-            // 버튼 비활성화
             submitBtn.disabled = true;
             submitBtn.textContent = '제출 중...';
             successMsg.style.display = 'none';
             errorMsg.style.display = 'none';
             
             try {
-                // 폼 데이터 수집
                 const formData = collectFormData();
-                
                 console.log('제출 데이터:', formData);
                 
-                // 서버로 전송
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
                 });
                 
-                // 약간의 지연 후 성공으로 간주
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 
-                // 성공 메시지 표시
+                // [중복 방지 1단계] 제출 성공 시 브라우저에 기록
+                localStorage.setItem('teso_survey_submitted', 'true');
+
                 successMsg.style.display = 'block';
                 successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // 폼 초기화
                 form.reset();
                 
             } catch (error) {
@@ -1559,32 +1623,24 @@
                 errorMsg.style.display = 'block';
                 errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } finally {
-                // 버튼 다시 활성화
                 submitBtn.disabled = false;
                 submitBtn.textContent = '설문 제출하기';
             }
         });
 
-        // 폼 데이터 수집 함수
         function collectFormData() {
             const data = {
                 timestamp: new Date().toISOString(),
                 submittedAt: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })
             };
-            
-            // 텍스트 입력
             form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea, select').forEach(input => {
                 if (input.name && input.value.trim()) {
                     data[input.name] = input.value.trim();
                 }
             });
-            
-            // 라디오 버튼
             form.querySelectorAll('input[type="radio"]:checked').forEach(radio => {
                 data[radio.name] = radio.value;
             });
-            
-            // 체크박스
             const checkboxGroups = {};
             form.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
                 if (!checkboxGroups[checkbox.name]) {
@@ -1592,16 +1648,12 @@
                 }
                 checkboxGroups[checkbox.name].push(checkbox.value);
             });
-            
-            // 체크박스 데이터 병합
             Object.keys(checkboxGroups).forEach(name => {
                 data[name] = checkboxGroups[name].join(', ');
             });
-            
             return data;
         }
 
-        // 페이지 로드 시 URL 확인
         window.addEventListener('load', function() {
             if (SCRIPT_URL.includes('YOUR_DEPLOYMENT_ID')) {
                 console.warn('⚠️ Google Apps Script URL이 설정되지 않았습니다.');
